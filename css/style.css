@@ -1,3 +1,163 @@
 body {
     font-family: Nunito, "San Serif";
 }
+
+/* global classes */
+.container{
+    max-width: 1280px;
+    margin: 1rem auto;
+}
+
+.row{
+    background-color: rgba(219, 234, 254, 1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.header{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+}
+/* end global classes */
+
+/* ------------------------ */
+
+/* main page classes */
+.main-page{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.main-page-description{
+    flex: 1 1 0%;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    max-width: 950px;
+    margin-right: 1rem;
+}
+
+.main-page-description h2{
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+/* start now div */
+.start-now{
+    max-width: 24rem;
+    margin: 2rem auto;
+}
+
+.start-caption{
+    margin-bottom: 1rem;
+}
+
+.start-caption h3{
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.start-caption p{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.start-form input{
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    border-width: 1px;
+    border-radius: 0.5rem;
+    line-height: 1.5rem;
+    padding: .375rem .75rem;
+    margin-bottom: 1rem;
+}
+
+.start-form button{
+    background-color: #47cdff;
+    border-radius: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    color: white;
+    border: 0;
+}
+
+.start-form button:hover{
+    background-color: #3B82F6;
+}
+
+.button-box{
+    width: 6rem;
+    margin: 0 auto;
+}
+
+.instructions{
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.instructions h3{
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.instructions ul{
+    list-style: disc;
+}
+
+.instructions li{
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+}
+
+/* side nav */
+.side-nav{
+    min-width: 14rem;
+}
+
+.leadboard h2{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    line-height: 2rem;
+}
+
+.leadboard li{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+
+
+
+
+
+@media(max-width:700px){
+    .main-page{
+        flex-direction: column;
+    }
+    .main-page-description{
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .leadboard li{
+        justify-content: space-around;
+    }
+}
