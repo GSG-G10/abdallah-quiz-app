@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizy Score</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="container header">
+        <h1>Quizy</h1>
+    </header>
+
+    <section class="custom-container">
+        <h2 id="compliment">Congratulations !</h2>
+        <h2 id="score">Your Socre is (9 / 10)</h2>
+        <button type="button" id="home-button">Home</button>
+    </section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            const user = JSON.parse(localStorage.getItem('currentUser')) || {};
+ 
+            if(Object.keys(user).length === 0){
+                window.location = "index.html";
+            }
+    
+            if(!user.hasOwnProperty("score")){
+                window.location = "question.html";
+            }
+
+            const compliment = document.querySelector('#compliment');
+            compliment.textContent = user.score >= 5 ? `Congratulations ${user.name} ! You Passed the quiz` : `Sorry ${user.name} ! you fialed the quiz`
+            
+            const score = document.querySelector('#score');
+            score.textContent = `Your Socre is (${user.score} / 10)`;
+
+            const homeButton = document.querySelector('#home-button');
+            homeButton.addEventListener('click',(e)=>{
+                e.preventDefault();
+                localStorage.removeItem('currentUser');
+                window.location = "index.html";
+            });
+        });
+    </script>
+</body>
+</html>
