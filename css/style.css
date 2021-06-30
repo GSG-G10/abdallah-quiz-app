@@ -209,7 +209,7 @@ body {
 .footer {
   padding: 1rem 4rem;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 .button-div button {
   background-color: #47cdff;
