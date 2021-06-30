@@ -137,11 +137,8 @@ const allQuestions = [
 
 ];
 const questionText = document.querySelector('#question-text');
-const answerOneLabel = document.querySelector('#answer-1-label');
-const answerTwoLabel = document.querySelector('#answer-2-label');
-const answerThreeLabel = document.querySelector('#answer-3-label');
-const answerFourLabel = document.querySelector('#answer-4-label');
 const nextButton = document.querySelector('#next-button');
+const previousButton = document.querySelector('#previous-button');
 
 
 let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
@@ -173,8 +170,6 @@ function generateQuestions(){
     }
 }
 
-generateQuestions();
-
 function answerQuestion(answer){
     console.log(answer);
 
@@ -203,9 +198,19 @@ function showCurrentQuestion(){
 
     displayCurrentQuestionNumber();
     
-    nextButton.disabled = true;
+    const currentQuestion = quizQuestions[currentQuestionNumber - 1];
 
-    questionText.innerHTML = quizQuestions[currentQuestionNumber - 1].question.question;
+    if(currentQuestionNumber != 1){
+        previousButton.disabled = false;
+    }
+
+    if(currentQuestion.answer == 0){
+        nextButton.disabled = true;
+    }else{
+        nextButton.disabled = false;
+    }
+
+    questionText.innerHTML = currentQuestion.question.question;
 
     const answersDiv = document.querySelector('.answers');
 
@@ -252,24 +257,41 @@ function showCurrentQuestion(){
         answerQuestion(input4.value);
     });
 
+
+    switch(currentQuestion.answer){
+        case "1":
+            input1.checked = true;
+            break;
+        case "2":
+        input2.checked = true;
+            break;
+        case "3":
+            input3.checked = true;
+            break;
+        case "4":
+            input4.checked = true;
+            break;
+    }
+
+
     const label1 = document.createElement('label');
     label1.htmlFor = "answer-1"
-    label1.textContent = " " + quizQuestions[currentQuestionNumber - 1].question.answer_1;
+    label1.textContent = " " + currentQuestion.question.answer_1;
 
 
     const label2 = document.createElement('label');
     label2.htmlFor = "answer-2"
-    label2.textContent = " " + quizQuestions[currentQuestionNumber - 1].question.answer_2;
+    label2.textContent = " " + currentQuestion.question.answer_2;
 
 
     const label3 = document.createElement('label');
     label3.htmlFor = "answer-3"
-    label3.textContent = " " + quizQuestions[currentQuestionNumber - 1].question.answer_3;
+    label3.textContent = " " + currentQuestion.question.answer_3;
 
 
     const label4 = document.createElement('label');
     label4.htmlFor = "answer-4"
-    label4.textContent = " " + quizQuestions[currentQuestionNumber - 1].question.answer_4;
+    label4.textContent = " " + currentQuestion.question.answer_4;
 
 
 
@@ -322,7 +344,6 @@ function showCurrentQuestion(){
 }
 
 
-showCurrentQuestion()
 
 nextButton.addEventListener('click',(e)=>{
    e.preventDefault(); 
@@ -337,6 +358,20 @@ nextButton.addEventListener('click',(e)=>{
     }
 
    showCurrentQuestion();
+});
+
+previousButton.addEventListener('click',(e) => {
+    e.preventDefault();
+    currentQuestionNumber--;
+    if(currentQuestionNumber == 1){
+        previousButton.disabled = true;
+    }
+
+    if(currentQuestionNumber != 10){
+        nextButton.textContent = "Next >";
+    }
+    
+    showCurrentQuestion();
 });
 
 function calculateScore(){
@@ -357,3 +392,8 @@ function calculateScore(){
 
     window.location = "score.html";
 }
+
+generateQuestions();
+
+
+showCurrentQuestion();
