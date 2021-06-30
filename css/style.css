@@ -1,163 +1,266 @@
 body {
-    font-family: Nunito, "San Serif";
+  font-family: Nunito, "San Serif";
 }
 
 /* global classes */
-.container{
-    max-width: 1280px;
-    margin: 1rem auto;
+.container {
+  max-width: 1280px;
+  margin: 1rem auto;
 }
 
-.row{
-    background-color: rgba(219, 234, 254, 1);
-    padding: 1rem;
-    border-radius: 0.5rem;
+.row {
+  background-color: rgba(219, 234, 254, 1);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
-.header{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 2.25rem;
-    font-weight: 700;
-    padding: 1rem 2rem;
+.header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
 }
 /* end global classes */
 
 /* ------------------------ */
 
 /* main page classes */
-.main-page{
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+.main-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
-.main-page-description{
-    flex: 1 1 0%;
-    border: 1px solid rgb(209, 213, 219);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    max-width: 950px;
-    margin-right: 1rem;
+.main-page-description {
+  flex: 1 1 0%;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 950px;
+  margin-right: 1rem;
 }
 
-.main-page-description h2{
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 2rem;
+.main-page-description h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
 }
 
 /* start now div */
-.start-now{
-    max-width: 24rem;
-    margin: 2rem auto;
+.start-now {
+  max-width: 24rem;
+  margin: 2rem auto;
 }
 
-.start-caption{
-    margin-bottom: 1rem;
+.start-caption {
+  margin-bottom: 1rem;
 }
 
-.start-caption h3{
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    font-weight: 500;
+.start-caption h3 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 500;
 }
 
-.start-caption p{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    margin-top: 0.5rem;
+.start-caption p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 0.5rem;
 }
 
-.start-form input{
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 400;
-    border-width: 1px;
-    border-radius: 0.5rem;
-    line-height: 1.5rem;
-    padding: .375rem .75rem;
-    margin-bottom: 1rem;
+.start-form input {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  line-height: 1.5rem;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.start-form button{
-    background-color: #47cdff;
-    border-radius: 0.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    color: white;
-    border: 0;
+.start-form button {
+  background-color: #47cdff;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: white;
+  border: 0;
 }
 
-.start-form button:hover{
-    background-color: #3B82F6;
+.start-form button:hover {
+  background-color: #3b82f6;
 }
 
-.button-box{
-    width: 6rem;
-    margin: 0 auto;
+.button-box {
+  width: 6rem;
+  margin: 0 auto;
 }
 
-.instructions{
-    padding: 1rem;
-    margin-top: 1rem;
+.instructions {
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
-.instructions h3{
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
+.instructions h3 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
-.instructions ul{
-    list-style: disc;
+.instructions ul {
+  list-style: disc;
 }
 
-.instructions li{
-    margin-bottom: 0.5rem;
-    margin-left: 2rem;
+.instructions li {
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
 }
 
 /* side nav */
-.side-nav{
-    min-width: 14rem;
+.side-nav {
+  min-width: 14rem;
 }
 
-.leadboard h2{
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1.25rem;
-    line-height: 2rem;
+.leadboard h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  line-height: 2rem;
 }
 
-.leadboard li{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
+.leadboard li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+/* end main page classess */
+
+/* ----------------------- */
+
+/* quastions page clasess */
+.questions-page {
+  padding: 1rem 2rem;
+}
+.questions-navigation {
+  margin-bottom: 1rem;
+}
+
+.questions-navigation ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.questions-navigation li {
+  background-color: #47cdff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
+
+.active {
+  background-color: #374151 !important;
+}
+
+.main-quastion {
+  text-align: justify;
+  padding: 2rem 4rem;
+  margin-bottom: 1rem;
+}
+
+.quastion {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.answers {
+  margin-bottom: 1rem;
+}
+
+.answer-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.readio-control {
+  min-width: 25rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+.footer {
+  padding: 1rem 4rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.button-div button {
+  background-color: #47cdff;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: white;
+  border: 0;
+}
+.button-div button:hover {
+  background-color: #3b82f6;
+}
+
+.button-div button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* end quastions page clasess */
+
+@media (max-width: 700px) {
+  .main-page {
+    flex-direction: column;
+  }
+  .main-page-description {
+    margin-right: 0;
     margin-bottom: 1rem;
-    margin-left: 1.25rem;
+  }
+  .leadboard li {
+    justify-content: space-around;
+  }
+  .questions-navigation li {
+    font-size: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+  .quastion {
     font-size: 1rem;
-    line-height: 1.25rem;
-}
+  }
+  .answer-div {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .readio-control {
+    min-width: 0;
 
-
-
-
-
-
-@media(max-width:700px){
-    .main-page{
-        flex-direction: column;
-    }
-    .main-page-description{
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-    .leadboard li{
-        justify-content: space-around;
-    }
+    max-width: 30rem !important;
+    margin-bottom: 1rem;
+  }
 }
