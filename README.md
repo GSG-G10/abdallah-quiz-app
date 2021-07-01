@@ -28,5 +28,8 @@ This Project is a Simple Quiz App Allowes you to test your skills in Javascript
 
     ![image](https://user-images.githubusercontent.com/78448519/124081381-24890680-da54-11eb-87e3-1633f0a204f7.png)
 
-## Figma Design :    
+## Links :    
+
   Figma [link](https://www.figma.com/file/ZtUGLrLpozZu0779H83nky/Untitled?node-id=0%3A1)
+
+  Demo  [link](https://gsg-g10.github.io/abdallah-quiz-app/index.html)
